@@ -1,0 +1,23 @@
+
+
+<p>{{errorMessage}}</p>
+
+<form [formGroup]='books' novalidate class="form" (ngSubmit)='addBook()'>
+   <input formControlName='Title' type="text" class="form-control" placeholder="Enter Title" />
+   <br/>
+   <input formControlName='Price' type="text" class="form-control" placeholder="Enter Price" />
+   <br/>
+  
+   <label class='control-label form-control'>Avaiable</label>
+   <br />
+   <label class="radio-inline form-control">
+       <input type="radio" value=true formControlName="inStock">Yes
+   </label>
+   <label class="radio-inline form-control">
+       <input type="radio" value=false formControlName="inStock">No
+   </label>
+   <br/>
+   <br/>
+   <button class="btn btn-info">Add</button>
+   <button class="btn btn-danger">Cancel</button>
+ </form>

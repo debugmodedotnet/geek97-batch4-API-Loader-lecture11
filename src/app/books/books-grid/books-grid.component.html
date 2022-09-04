@@ -1,0 +1,9 @@
+
+<div class="card" style="width: 18rem;" *ngFor="let b of books$ | async">
+    <div class="card-body">
+      <h5 class="card-title">{{b.Title}}</h5>
+      <p class="card-text">Price : {{b.Title}}</p>
+      <p class="card-text">inStock : {{b.inStock}}</p>
+      <a (click)="navigateToDetails(b.Id)" class="btn btn-primary">Details</a>
+    </div>
+  </div>

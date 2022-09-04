@@ -1,0 +1,53 @@
+
+<div class="row">
+
+  <div>
+    <table  class="table">
+      <thead>
+         <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Avaiable</th>
+          <th></th>
+         </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let b of books ">
+          <td>{{b.Id}}</td>
+          <td>{{b.Title}}</td>
+          <td>{{b.Price}}</td>
+          <td>{{b.inStock}}</td>
+          <td><button class="btn btn-default" (click)="navigateToDetails(b.Id)">Details</button></td>
+        </tr>
+      </tbody>
+  </table>
+  </div>
+
+
+
+  <ng-template #loading>Books Loading...</ng-template>
+    <!-- <div *ngIf="books$ == undefined">
+      <h2>data is loading </h2>
+    </div>
+    <table  class="table" *ngIf="books$ != undefined">
+        <thead>
+           <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Avaiable</th>
+            <th></th>
+           </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of books$ | async">
+            <td>{{b.Id}}</td>
+            <td>{{b.Title}}</td>
+            <td>{{b.Price}}</td>
+            <td>{{b.inStock}}</td>
+            <td><button class="btn btn-default" (click)="navigateToDetails(b.Id)">Details</button></td>
+          </tr>
+        </tbody>
+    </table> -->
+</div> 
